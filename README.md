@@ -1,4 +1,4 @@
-# Aria: Wearable Respiratory & Posture Monitoring System
+# Aria: Wearable Respiratory Monitoring System
 
 Aria is a proof-of-concept wearable device designed for real-time respiratory tracking, posture classification, and tactile intervention. Built with a focus on Apnea and hyperventilation awareness, the system utilizes a pneumatic pressure-sensing belt and an Arduino micro-controller to monitor breathing patterns, detect anomalies (apnea and hyperventilation events), and trigger haptic feedback as a form of tactile arousal therapy.
 
