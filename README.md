@@ -12,15 +12,17 @@ Aria is a proof-of-concept wearable device designed for real-time respiratory tr
 * **Real-Time Telemetry:** Streams live data to through a localized Web Dashboard over Wi-Fi.
 
 ## 📊 Operational Constraints & Performance
+
 Due to the physical design of the pneumatic sensing mechanism, system accuracy is highly dependent on the user's kinetic state and posture.
 
-| Activity / State | Primary Error Source 
+| Activity / State | Primary Error Source | System Reliability |
 | :--- | :--- | :--- |
-| **Standing (Deep/Normal)** | Negligible baseline drift |
-| **Supine (Deep/Normal)** | None (High Signal-to-Noise Ratio) |
-| **Shallow Breathing** | Low mechanical signal amplitude |
-| **Slow Walking** | Motion artifacts & baseline shifting |
-| **Non-Supine Lying** | Mechanical sensor decoupling (No Estimation Possible) |
+| **Standing (Deep/Normal)** | Negligible baseline drift | High |
+| **Supine (Deep/Normal)** | None (High Signal-to-Noise Ratio) | Excellent (Optimal State) |
+| **Shallow Breathing** | Low mechanical signal amplitude | Moderate (Requires higher sensitivity) |
+| **Slow Walking** | Motion artifacts & baseline shifting | Low (Filters needed for compensation) |
+| **Non-Supine Lying** | Mechanical sensor decoupling | **No Estimation Possible** |
 
 * **Anatomical Constraint:** Monitoring in a lying position is strictly limited to the **supine (face-up)** posture. Prone or lateral positions compress the belt, resulting in signal loss.
 * **Proximity Constraint:** The user’s designated host device (PC, laptop, or smartphone) must remain within the effective Wi-Fi range of the microcontroller.
+
